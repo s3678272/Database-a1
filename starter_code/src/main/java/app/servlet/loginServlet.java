@@ -42,22 +42,22 @@ public class loginServlet extends HttpServlet{
         try{
             if(email.equals("") && !password.equals("")){
                 request.setAttribute("errorEmailempty", "email can not be empty!");
-                request.getRequestDispatcher("index.java").forward(request, response);
+                request.getRequestDispatcher("index.html").forward(request, response);
             }else if(password.equals("") && !email.equals("")){
                 request.setAttribute("errorPasswordempty", "Password can not be empty!");
-                request.getRequestDispatcher("index.java").forward(request, response);
+                request.getRequestDispatcher("index.html").forward(request, response);
             }else if (email.equals("") && password.equals("")) {
                 request.setAttribute("errorEmailempty", "email can not be empty!");
                 request.setAttribute("errorPasswordempty", "Password can not be empty!");
-                request.getRequestDispatcher("index.java").forward(request, response);
+                request.getRequestDispatcher("index.html").forward(request, response);
             }else { //if the user input is good then we check if their emaiil recorded in the database or not
                 int result = loginDao.login(user);
 
                 if (result > 0) {
-                    request.getRequestDispatcher("page2.java").forward(request, response);
+                    request.getRequestDispatcher("page2.html").forward(request, response);
                 } else {
                     request.setAttribute("errorMsgL", "Login failed, Please enter your correct email or password!");
-                    request.getRequestDispatcher("index.java").forward(request, response);
+                    request.getRequestDispatcher("index.html").forward(request, response);
                 }
             }
         }catch (Exception e) {

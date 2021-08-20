@@ -45,19 +45,19 @@ public class registerServlet extends HttpServlet{
         try{
             if(email.equals("")||password.equals("")||fullname.equals("")||screenname.equals("")||dateofbrith.equals("")||gender.equals("")||status.equals("")||location.equals("")){
                 request.setAttribute("erroremptyAll", "Fields can not be empty!");
-                request.getRequestDispatcher("page5.java").forward(request, response);
+                request.getRequestDispatcher("page5.html").forward(request, response);
             }else if(fullNameIsString == false){
                 request.setAttribute("errorFNstring", "the FullName can only be string");
-                request.getRequestDispatcher("page5.java").forward(request, response);
+                request.getRequestDispatcher("page5.html").forward(request, response);
             }else{
                 boolean result = loginDao.register(user);
                 if(result == true){
                     System.out.println("register Success!!!!!！"); //print to consol
-                    request.getRequestDispatcher("page2.java").forward(request, response);
+                    request.getRequestDispatcher("page2.html").forward(request, response);
                 }else{
                     System.out.println("register failed");
                     request.setAttribute("errorMsgR", "Register failed, this email has been registed, please try another email!");
-                    request.getRequestDispatcher("page5.java").forward(request, response);
+                    request.getRequestDispatcher("page5.html").forward(request, response);
                 }
             }
         }catch (Exception e){
