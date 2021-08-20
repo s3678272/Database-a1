@@ -1,0 +1,98 @@
+/* -----------------------
+Base styles
+------------------------*/
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+	'header header header header header header'
+	'nav main main main main main'
+	'footer footer footer footer footer footer';
+	grid-gap: 10px;
+	grid-template-columns: 300px 100px 100px 300px;
+	background-color: #FFCCFF;
+	padding: 10px;
+  }
+  
+  .grid-container > div {
+	 background-color: #E8E8E8;
+	  padding: 10px;
+	  font-size: 150%;
+	  margin: 20px;
+	  border-radius: 10px;
+  }
+  body {
+	margin: 40px;
+   
+}
+  .header {
+	grid-area: header; 
+	margin: auto;
+	text-align: center;
+	padding: 20px;
+	border-style: solid;
+	border-color: #9933FF;/*change border color*/
+	
+	}
+    
+.nav {
+	grid-area: nav; 
+	text-align: center;
+
+
+	}
+li {
+	text-align:center;
+	text-decoration:none;
+	list-style:none;
+	margin:20px;
+	font-size:20px;
+}
+
+.main { 
+   grid-area: main; 
+   text-align: center;
+   border-style: solid;
+   border-color: yellow;
+   }
+
+.footer {
+	grid-area: footer; 
+	}
+
+#registration_form{   
+	margin-left: 350px;  
+	width: 300px;   
+	height: 300px;   
+	   }   
+  
+ 
+input{   
+	width: 350px;   
+	height: 50px;   
+	margin-bottom: 10px;   
+	outline: none;   
+	padding: 10px;   
+	font-size: 13px;   
+	color: #fff;   
+	text-shadow:1px 1px 1px;   
+	border-top: 1px solid #312E3D;   
+	border-left: 1px solid #312E3D;   
+	border-right: 1px solid #312E3D;   
+	border-bottom: 1px solid #56536A;   
+	border-radius: 4px;   
+	background-color: #2D2D3F;   
+	   }   
+.button{   
+	width: 350px;   
+	min-height: 20px;   
+	display: block;   
+	background-color: #4a77d4;   
+	border: 1px solid #3762bc;   
+	color: #fff;   
+	padding: 9px 14px;   
+	font-size: 15px;   
+	line-height: normal;   
+	border-radius: 5px;   
+	margin: 0;   
+	   }
