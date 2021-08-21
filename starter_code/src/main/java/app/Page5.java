@@ -1,7 +1,6 @@
 package app;
 
 import java.util.ArrayList;
-
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
 
@@ -41,8 +40,6 @@ public class Page5 implements Handler {
       html = html + "<link rel='stylesheet' href'//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>";
       html = html + "<link rel='stylesheet' href='path/to/font-awesome/css/font-awesome.min.css'>";
 
-
-
       html = html + "<link rel='stylesheet' type='text/css' href='register.css' />\n";
 
       // Add the body
@@ -50,7 +47,7 @@ public class Page5 implements Handler {
       html = html + "<div class='container'>";
 
       JDBCConnection jdbc = JDBCConnection.getConnection();
-      ArrayList<String> member = jdbc.getMember();
+      ArrayList<String> movies = jdbc.getMovies();
 
       html = html + "<center>"; 
       html = html + "<b id='login-name'>SIGN-UP Here </b>"; 
@@ -88,7 +85,6 @@ public class Page5 implements Handler {
       html = html + "<input type='text' class='form-control' id='text2' name='tl' placeholder=' Enter Password'>";
       html = html + "</div>";
 
-
       html = html + "<div class='form-group label_001' >";
       html = html + "<label class='user'> Gender: </label>";
       html = html + "<label class='adio-inline'><input type='radio' name='optradio'>Male</label>";
@@ -100,7 +96,6 @@ public class Page5 implements Handler {
       html = html + "<input type='date' class='form-control' id='text2' name='tl'>";
       html = html + "</div>";
 
-      
       html = html + "<div class='form-group' >";
       html = html + "<label class='user'> Status: </label>";
       
@@ -120,14 +115,12 @@ public class Page5 implements Handler {
       html = html + "<input type='textarea' class='form-control'  name='tl'>";
       html = html + "</div>";
 
-
 html = html + "<div class='form-group'>";
 
 html = html + "<input type='submit' class='btn btn-success' value='submit' style='border-radius:0px;'>";
 html = html + "<br>";
 html = html + "<br>";
 html = html + "<a href='/' style='color: white; font-size: 15px; float: right; margin-right: 10px;'> Back login page </a>";
-
 
 html = html + "</div>";
     
